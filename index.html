@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazarus Goodbye Tool - Herramienta Profesional para Lazarus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        .features {
+            background: white;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .info {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+        
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .info h2 {
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .tech-item strong {
+            color: #667eea;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🚀 Lazarus Goodbye</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#info">Información</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="inicio">
+        <h1>Lazarus Goodbye Tool</h1>
+        <p>La herramienta definitiva para gestionar y despedir proyectos Lazarus con estilo</p>
+        <div class="cta-buttons">
+            <a href="https://github.com/cece131015-ctrl/lazarus-goodbye-tool" class="btn btn-primary">Ver en GitHub</a>
+            <a href="#info" class="btn btn-secondary">Más información</a>
+        </div>
+    </section>
+    
+    <section class="features" id="caracteristicas">
+        <div class="features-container">
+            <h2>Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>⚡ Rendimiento</h3>
+                    <p>Optimizado para máxima velocidad y eficiencia en tus proyectos Lazarus.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛠️ Fácil de Usar</h3>
+                    <p>Interfaz intuitiva que cualquier desarrollador puede dominar en minutos.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Seguro</h3>
+                    <p>Protección total de derechos de autor y código fuente con licencia restrictiva.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📦 Integración</h3>
+                    <p>Se integra perfectamente con tu flujo de trabajo Lazarus existente.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌐 Moderno</h3>
+                    <p>Construido con tecnologías modernas y mejores prácticas de desarrollo.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💡 Innovador</h3>
+                    <p>Características avanzadas que marcan la diferencia en tu desarrollo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="info" id="info">
+        <div class="info-container">
+            <h2>Detalles del Proyecto</h2>
+            <p>Lazarus Goodbye Tool es un proyecto profesional desarrollado con TypeScript y tecnologías modernas.</p>
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #667eea;">Stack Tecnológico</h3>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <strong>Lenguaje:</strong> TypeScript
+                </div>
+                <div class="tech-item">
+                    <strong>Licencia:</strong> All Rights Reserved
+                </div>
+                <div class="tech-item">
+                    <strong>Estado:</strong> Activo y Mantenido
+                </div>
+                <div class="tech-item">
+                    <strong>Autor:</strong> cece131015-ctrl
+                </div>
+            </div>
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #667eea;">Enlaces Importantes</h3>
+            <p><strong>Repositorio Principal:</strong> <a href="https://github.com/cece131015-ctrl/lazarus-goodbye-tool" style="color: #667eea; text-decoration: none;">github.com/cece131015-ctrl/lazarus-goodbye-tool</a></p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/cece131015-ctrl/lazarus-goodbye-tool">GitHub</a>
+            <a href="https://github.com/cece131015-ctrl">Perfil</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 cece131015-ctrl. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Lazarus Goodbye Tool - Herramienta profesional para Lazarus</p>
+        </div>
+    </footer>
+</body>
+</html>
